@@ -1,0 +1,23 @@
+@keyframes slideUp {
+  0% {
+    top: 0%;
+  }
+  100% {
+    top: -100%;
+  }
+}
+
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Versteckt die Scrollleiste in WebKit-Browsern (Chrome, Safari) */
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  /* Versteckt die Scrollleiste in Internet Explorer und Edge */
+  scrollbar-width: none;  /* Versteckt die Scrollleiste in Firefox */
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  
+
+}
+

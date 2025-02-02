@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+
+.fa-heart {
+    color: rgb(256, 256, 256);
+    font-size: 25px;
+    position: absolute;
+    animation:  heartMove linear 1;
+    top: -10vh;
+    z-index: 0;
+}
+
+@keyframes heartMove {
+    0%{
+        transform: translateY(-10vh) ;
+    }
+    100%{
+        transform: translateY(110vh) ;
+    }
+}
+
+#hearts-container {
+  position: fixed;
+  background: linear-gradient(45deg,pink,violet);
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+
+.explosive-button {
+    background-color: #FFB6C1;
+    /*border-radius: 5px;
+    font-size: 20px;
+    color: #ffffff;
+    margin: auto;
+    padding: 12px 20px;
+    border: 0;*/
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.explosive-button:focus,
+.explosive-button:hover {
+    background-color: #FFB6C1;
+    outline: transparent;
+}
+
+.exploding,
+.exploding:focus,
+.exploding:hover {
+    background-color: transparent;
+    color: transparent;
+    pointer-events: none;
+    position: relative;
+    will-change: transform;
+}
+
+.particle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #FFB6C1;
+}
+
+
+.popup {
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Übergangseffekt für die Opazität über 0.5 Sekunden */
+}
+
+.fade-in {
+    opacity: 1; /* Setze die Opazität auf 1, um das Popup sichtbar zu machen */
+}
